@@ -2,6 +2,7 @@ import './LoginWindow.css'
 import Input from './../../components/Input/Input.tsx';
 import DefaultButton from './../../components/Buttons/DefaultButton';
 import { useState } from 'react';
+import { getLoggedIn } from '../../api/Client.ts';
 
 function LoginWindow() {
     const [user, setUser] = useState("");
@@ -30,8 +31,15 @@ function LoginWindow() {
     )
 }
 
-function onEnterButtonClick() {
-    alert("");
+async function onEnterButtonClick() {
+    try {
+        await getLoggedIn();
+        alert("Good");
+    } catch {
+        alert("Bad");
+    } finally {
+        alert("Finally");
+    }
 }
 
 export default LoginWindow
