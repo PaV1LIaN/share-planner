@@ -1,0 +1,21 @@
+.login-window {
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+
+    width: 320px;
+
+    padding: 32px;
+
+    background-color: #ffffff;
+
+    border: 4px solid #111;
+    border-radius: 0;
+
+    box-shadow: 12px 12px 0 #111;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
