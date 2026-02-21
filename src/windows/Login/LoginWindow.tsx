@@ -33,12 +33,10 @@ function LoginWindow() {
 
 async function onEnterButtonClick() {
     try {
-        await getLoggedIn();
-        alert("Good");
+        const response = await getLoggedIn();
+        alert(response.message + " " + response.status);
     } catch {
         alert("Bad");
-    } finally {
-        alert("Finally");
     }
 }
 
