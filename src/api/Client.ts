@@ -9,7 +9,7 @@ export const api = axios.create({
 // TODO: functional style rework with success of failure return
 export async function getLoggedIn(): Promise<LoginResponseDto> {
     try {
-        const response = await api.get<LoginResponseDto>("/login");
+        const response = await api.get<LoginResponseDto>("/api");
         return response.data;
     }
     catch (error) {

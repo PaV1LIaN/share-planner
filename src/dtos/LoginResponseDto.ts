@@ -1,3 +1,4 @@
 export type LoginResponseDto = {
-    entered: boolean;
+    status: string;
+    message: string;
 }
